@@ -11,18 +11,17 @@ export class AppComponent {
   gptAns= "";
   myInputText!: string;
   mySearch ={
-    "question": this.searchTerm,
-    "max_response_time": 10
+    text: this.searchTerm,
 };
   constructor(private gptsrc: GptService) {
 
   }
   generateResult(title:string) {
-    this.mySearch.question=title;
+    this.mySearch.text=title;
     this.gptsrc.post(this.mySearch).subscribe((data: any) => {
-      this.gptAns=data.answer;
-      this.mySearch.question='';
-      console.log(data.answer);
+      this.gptAns=data;
+      this.mySearch.text='';
+      console.log(data);
      });
 
 

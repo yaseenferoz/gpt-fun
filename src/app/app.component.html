@@ -13,7 +13,7 @@
 
 
       </div>
-      <div  *ngIf="(!gptAns && mySearch.question)" >
+      <div  *ngIf="(!gptAns && mySearch.text)" >
         <h4 style="text-align: center; color:#00DFFC ;">Sabar Karo zara</h4>
         <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
@@ -44,7 +44,7 @@
           </g>
         </svg>
       </div>
-    <div *ngIf="gptAns && !mySearch.question" class="card">
+    <div *ngIf="gptAns && !mySearch.text" class="card">
       <div class="card-content">
         <p class="title">
           <span class="type" style="--n:1000">{{gptAns}}</span>
