@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="card">
+      <div class="card-content">
+
+        <div class="content">
+          <h2>Baigan ka GPT</h2>
+
+          <input class="input" #titleInput type="text" placeholder="Angrezi me type kar">
+
+        </div>
+        <button type="submit" class="button"  (click)="generateResult(titleInput.value)">Pooch</button>
+
+
+      </div>
+    </div>
+    <div *ngIf="gptAns" class="card">
+      <div class="card-content">
+        <p class="title">
+          <span class="type" style="--n:1000"  [innerHTML]="gptAns"></span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
