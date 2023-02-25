@@ -21,6 +21,7 @@ export class AppComponent {
     this.mySearch.question=title;
     this.gptsrc.post(this.mySearch).subscribe((data: any) => {
       this.gptAns=data.answer;
+      this.mySearch.question='';
       console.log(data.answer);
      });
 
