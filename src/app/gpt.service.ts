@@ -13,7 +13,7 @@ export class GptService {
   public post(data: any): Observable<any> {
     const headers = new HttpHeaders()
       .set('content-type', 'application/json')
-      .set('X-RapidAPI-Key', '17f87f333emshff154a04bb29554p1ac694jsncc6b6af96fbc')
+      .set('X-RapidAPI-Key', '72ab11b691msh4ca84c578db4257p1db41bjsn64e412a7131c')
       .set('X-RapidAPI-Host', 'you-chat-gpt.p.rapidapi.com'); // set your desired headers here
 
     const body = JSON.stringify(data); // set your desired request body here
