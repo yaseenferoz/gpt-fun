@@ -12,7 +12,7 @@ export class AppComponent {
   searchTerm!: String;
   gptAns= "";
   myInputText!: string;
-  typedResponse!:string;
+  typedResponse="";
   mySearch ={
     text: this.searchTerm,
 };
