@@ -24,6 +24,9 @@ ngOnInit():void {
 }
 
   generateResult(title:string) {
+    if(this.gptAns){
+      this.typedResponse="";
+    }
     this.mySearch.text=title;
     this.gptsrc.post(this.mySearch).subscribe((data: any) => {
       this.gptAns=data;

@@ -44,10 +44,12 @@
           </g>
         </svg>
       </div>
-    <div *ngIf="gptAns && !mySearch.text" class="card">
+    <div *ngIf="gptAns && !mySearch.text" class="card answer-resp">
       <div class="card-content">
         <p class="title">
-          <span  [innerHTML]="typedResponse"></span>
+          <code>
+            <span  [innerHTML]="typedResponse"></span>
+          </code>
         </p>
       </div>
     </div>
