@@ -1,10 +1,11 @@
 <div class="container">
+  <app-vision-title></app-vision-title>
   <div class="columns is-centered">
     <div class="card">
       <div class="card-content">
 
         <div class="content">
-        <app-vision-title></app-vision-title>
+      
 
           <!-- <input class="input" #titleInput type="text" [(ngModel)]="inputText" placeholder="What's in your mind?"> -->
           <input class="input" type="text" placeholder="What's in your mind?"  [(ngModel)]="inputText" (keyup.enter)="onEnterKeyPressed(inputText)">
