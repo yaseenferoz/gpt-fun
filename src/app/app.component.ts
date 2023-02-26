@@ -8,7 +8,7 @@ import { GptService } from './gpt.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'baiganKaGPT';
+  title = 'Talk To Machine';
   searchTerm!: String;
   gptAns= "";
   myInputText!: string;

@@ -4,17 +4,17 @@
       <div class="card-content">
 
         <div class="content">
-          <h2>Baigan ka GPT</h2>
+          <h2 class="">Talk to Me</h2>
 
-          <input class="input" #titleInput type="text" placeholder="Angrezi me type kar">
+          <input class="input" #titleInput type="text" placeholder="What's in your mind?">
 
         </div>
-        <button type="submit" class="button"  (click)="generateResult(titleInput.value)">Pooch</button>
+        <button type="submit" class="button is-info"  (click)="generateResult(titleInput.value)">Ask Me</button>
 
 
       </div>
       <div  *ngIf="(!gptAns && mySearch.text)" >
-        <h4 style="text-align: center; color:#00DFFC ;">Sabar Karo zara</h4>
+        <h4 style="text-align: center; color:#00DFFC ;">Be Patient</h4>
         <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
             <g transform="translate(9.5,19)">
