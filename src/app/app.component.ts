@@ -8,11 +8,14 @@ import { GptService } from './gpt.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Talk To Machine';
+  title = 'Vision Bot';
   searchTerm!: String;
   gptAns= "";
   myInputText!: string;
   typedResponse="";
+  isLoading = false;
+  inputText: string = '';
+
   mySearch ={
     text: this.searchTerm,
 };
@@ -20,15 +23,17 @@ export class AppComponent {
 
   }
 ngOnInit():void {
-
+  
 }
 
   generateResult(title:string) {
+    this.isLoading = true;
     if(this.gptAns){
       this.typedResponse="";
     }
     this.mySearch.text=title;
     this.gptsrc.post(this.mySearch).subscribe((data: any) => {
+     
       this.gptAns=data;
       this.mySearch.text='';
       console.log(data);
@@ -40,9 +45,14 @@ ngOnInit():void {
           clearInterval(intervalId);
         }
       }, 50);
+      this.isLoading = false;
      });
 
 
+  }
+
+  onEnterKeyPressed(title:string) {
+    this.generateResult(title)
   }
 
 
