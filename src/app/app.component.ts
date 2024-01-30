@@ -32,7 +32,16 @@ ngOnInit():void {
       this.typedResponse="";
     }
     this.mySearch.text=title;
-    this.gptsrc.post(this.mySearch).subscribe((data: any) => {
+    const myPayload = {
+      "messages": [
+          {
+              role: "assistent",
+              content: this.mySearch
+          }
+      ],
+      model: "gpt-3.5-turbo"
+  }
+    this.gptsrc.post(myPayload).subscribe((data: any) => {
      
       this.gptAns=data;
       this.mySearch.text='';
